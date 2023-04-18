@@ -1,0 +1,134 @@
+:root {
+  --blue-darkest: #11222f;
+  --blue-dark: #24455c;
+  --blue-medium: #365c77;
+  --blue-light: #d6d9d7;
+  --color: #222;
+  --heading-color: black;
+  --primary: var(--blue-dark);
+  --on-primary: #ffffff;
+  --primary-hover: var(--blue-medium);
+  --border: rgba(125, 125, 125, 0.4);
+  --surface: #d6d9d7;
+  --on-surface: #000;
+  --surface-heavy: rgba(125, 125, 125, 0.25);
+  color: var(--color);
+  color-scheme: light dark;
+  font-family: sans-serif;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: #ddd;
+    --heading-color: white;
+    --surface: var(--blue-dark);
+    --surface-hover: var(--blue-medium);
+    --on-surface: var(--color);
+  }
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/@/fonts/JosefinSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  color: var(--color);
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-weight: normal;
+  margin-bottom: 1rem;
+  scroll-margin-top: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Josefin Sans;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  border-bottom: 1px solid var(--border);
+  line-height: 1;
+  margin-bottom: 1rem;
+  margin-top: 2em;
+  padding-bottom: 1rem;
+}
+
+ul,
+ol {
+  line-height: 2em;
+  padding-inline-start: 1rem;
+}
+
+a.button,
+spa-link.button::part(link) {
+  background: var(--surface);
+  border-radius: 4px;
+  color: var(--on-surface);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+}
+
+a.button:hover,
+spa-link.button:hover::part(link) {
+  background: var(--surface-hover);
+}
+
+/* home */
+
+.home > img {
+  margin-left: calc(50% - 50vw);
+  margin-top: 3rem;
+  width: calc(100vw);
+}
+
+@media (min-width: 900px) {
+  .home > img {
+    border-radius: 2rem;
+    margin-left: -15ch;
+    width: 100ch;
+  }
+}
+
+/* bio */
+
+.bio img {
+  float: left;
+  margin: 1rem;
+  margin-left: 0;
+  width: 150px;
+}
+
+/* incorporating rights */
+
+.book-header {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 3rem 0;
+}
+
+.book-header h1,
+.book-header h2 {
+  margin: 0;
+}
