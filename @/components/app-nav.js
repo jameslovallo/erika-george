@@ -49,6 +49,12 @@ ardi({
     }
     spa-link:hover {
       color: var(--blue-medium);
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      spa-link:hover {
+        color: white;
+      }
     }
     spa-link::part(link) {
       align-items: center;

@@ -1,17 +1,22 @@
 :root {
+  /* colors */
+  --beige: #eeede7;
   --blue-darkest: #11222f;
   --blue-dark: #24455c;
   --blue-medium: #365c77;
   --blue-light: #d6d9d7;
-  --color: #222;
+  --off-black: #222;
+  --off-white: #ddd;
+  /* type */
+  --color: var(--off-black);
   --heading-color: black;
-  --primary: var(--blue-dark);
-  --on-primary: #ffffff;
-  --primary-hover: var(--blue-medium);
   --border: rgba(125, 125, 125, 0.4);
-  --surface: #d6d9d7;
-  --on-surface: #000;
+  /* materials */
+  --surface: var(--blue-dark);
+  --on-surface: white;
+  --surface-hover: var(--blue-medium);
   --surface-heavy: rgba(125, 125, 125, 0.25);
+  background: var(--beige);
   color: var(--color);
   color-scheme: light dark;
   font-family: sans-serif;
@@ -21,11 +26,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color: #ddd;
+    --color: var(--off-white);
     --heading-color: white;
-    --surface: var(--blue-dark);
-    --surface-hover: var(--blue-medium);
-    --on-surface: var(--color);
+    background: unset;
   }
 }
 
@@ -112,10 +115,16 @@ spa-link.button:hover::part(link) {
 
 /* bio */
 
-.bio img {
-  float: left;
-  margin: 1rem;
-  margin-left: 0;
+.bio .header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-flow: row wrap;
+  margin: 2rem 0;
+}
+
+.bio .header img {
+  border-radius: 0.5rem;
   width: 150px;
 }
 
