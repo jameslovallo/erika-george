@@ -16,7 +16,7 @@ ardi({
         </p>
         <div part="footer-nav">
           ${nav.map(
-            (page) => html`<spa-link href=${page.href}>${page.label}</spa-link>`
+            (page) => html`<a is="app-link" href=${page.href}>${page.label}</a>`
           )}
         </div>
         <p>© ${new Date().getFullYear()} Erika George</p>
@@ -39,11 +39,11 @@ ardi({
       text-align: center;
       top: 100vh;
     }
-    a, spa-link::part(link) {
+    a {
       color: var(--on-surface);
       text-decoration: none;
     }
-    a:hover, spa-link:hover::part(link) {
+    a:hover {
       text-decoration: underline;
     }
     [part=footer-nav] {
@@ -56,7 +56,7 @@ ardi({
         display: flex;
       }
     }
-    [part=footer-nav] spa-link:first-of-type {
+    [part=footer-nav] a:first-of-type {
       display: none;
     }
   `,

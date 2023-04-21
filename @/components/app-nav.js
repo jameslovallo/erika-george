@@ -20,18 +20,19 @@ ardi({
             ${nav.map(
               (page) =>
                 html`
-                  <spa-link
+                  <a
+                    is="app-link"
                     href=${page.href}
                     @click=${() => (this.refs.drawer.open = false)}
                   >
                     ${page.label}
-                  </spa-link>
+                  </a>
                 `
             )}
           </div>
         </ardi-dialog>
         ${nav.map(
-          (page) => html`<spa-link href=${page.href}>${page.label}</spa-link>`
+          (page) => html`<a is="app-link" href=${page.href}>${page.label}</a>`
         )}
       </nav>
     `
@@ -43,26 +44,25 @@ ardi({
       gap: 1rem;
       padding: 1rem;
     }
-    spa-link:first-of-type {
-      font-weight: bold;
-      margin-right: auto;
-    }
-    spa-link:hover {
-      color: var(--blue-medium);
-      text-decoration: underline;
-    }
-    @media (prefers-color-scheme: dark) {
-      spa-link:hover {
-        color: white;
-      }
-    }
-    spa-link::part(link) {
+    a {
       align-items: center;
       color: inherit;
       display: flex;
       font-size: 1rem;
       height: 100%;
       text-decoration: none;
+    }
+    a:first-of-type {
+      font-weight: bold;
+      margin-right: auto;
+    }
+    a:hover {
+      color: var(--blue-medium);
+    }
+    @media (prefers-color-scheme: dark) {
+      a:hover {
+        color: white;
+      }
     }
     [slot=opener] {
       align-items: center;
@@ -91,17 +91,17 @@ ardi({
       gap: 1.5rem;
       height: calc(100vh - 2rem);
     }
-    [part=drawer-links] spa-link::part(link) {
+    [part=drawer-links] a {
       font-size: 1.25rem;
     }
-    nav > spa-link:not(:first-of-type):not(:last-of-type) {
+    nav > a:not(:first-of-type):not(:last-of-type) {
       display: none;
     }
     @media (min-width: 768px) {
       nav ardi-dialog[drawer] {
         display: none;
       }
-      nav > spa-link:not(:first-of-type):not(:last-of-type) {
+      nav > a:not(:first-of-type):not(:last-of-type) {
         display: block;
       }
     }

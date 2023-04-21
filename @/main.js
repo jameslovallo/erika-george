@@ -2,9 +2,9 @@
 const components = [
   'app-footer',
   'app-layout',
+  'app-link',
   'app-nav',
-  'spa-link',
-  'spa-root',
+  'app-root',
 ]
 components.forEach((c) => import(`/@/components/${c}.js`))
 

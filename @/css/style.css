@@ -83,8 +83,7 @@ ol {
   padding-inline-start: 1rem;
 }
 
-a.button,
-spa-link.button::part(link) {
+a.button {
   background: var(--surface);
   border-radius: 4px;
   color: var(--on-surface);
@@ -92,8 +91,7 @@ spa-link.button::part(link) {
   text-decoration: none;
 }
 
-a.button:hover,
-spa-link.button:hover::part(link) {
+a.button:hover {
   background: var(--surface-hover);
 }
 
