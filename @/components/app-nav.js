@@ -20,19 +20,24 @@ ardi({
             ${nav.map(
               (page) =>
                 html`
-                  <a
-                    is="app-link"
-                    href=${page.href}
-                    @click=${() => (this.refs.drawer.open = false)}
-                  >
-                    ${page.label}
-                  </a>
+                  <app-link>
+                    <a
+                      href=${page.href}
+                      @click=${() => (this.refs.drawer.open = false)}
+                    >
+                      ${page.label}
+                    </a>
+                  </app-link>
                 `
             )}
           </div>
         </ardi-dialog>
         ${nav.map(
-          (page) => html`<a is="app-link" href=${page.href}>${page.label}</a>`
+          (page) => html`
+            <app-link>
+              <a href=${page.href}>${page.label}</a>
+            </app-link>
+          `
         )}
       </nav>
     `
@@ -52,7 +57,7 @@ ardi({
       height: 100%;
       text-decoration: none;
     }
-    a:first-of-type {
+    app-link:first-of-type {
       font-weight: bold;
       margin-right: auto;
     }
@@ -94,14 +99,14 @@ ardi({
     [part=drawer-links] a {
       font-size: 1.25rem;
     }
-    nav > a:not(:first-of-type):not(:last-of-type) {
+    nav > app-link:not(:first-of-type):not(:last-of-type) {
       display: none;
     }
     @media (min-width: 768px) {
       nav ardi-dialog[drawer] {
         display: none;
       }
-      nav > a:not(:first-of-type):not(:last-of-type) {
+      nav > app-link:not(:first-of-type):not(:last-of-type) {
         display: block;
       }
     }

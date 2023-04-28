@@ -1,3 +1,7 @@
+import 'https://unpkg.com/ardi/@/components/app-link.js'
+import 'https://unpkg.com/ardi/@/components/app-root.js'
+import 'https://unpkg.com/ardi/demos/dialog/dialog.js'
+
 // load all components
 const components = [
   'app-footer',
@@ -7,8 +11,6 @@ const components = [
   'app-root',
 ]
 components.forEach((c) => import(`/@/components/${c}.js`))
-
-import('https://unpkg.com/ardi/demos/dialog/dialog.js')
 
 // fade in gracefully when components are loaded
 const isDefined = components.map((c) => customElements.whenDefined(c))

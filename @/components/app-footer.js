@@ -16,7 +16,11 @@ ardi({
         </p>
         <div part="footer-nav">
           ${nav.map(
-            (page) => html`<a is="app-link" href=${page.href}>${page.label}</a>`
+            (page) => html`
+              <app-link>
+                <a href=${page.href}>${page.label}</a>
+              </app-link>
+            `
           )}
         </div>
         <p>© ${new Date().getFullYear()} Erika George</p>
@@ -56,7 +60,7 @@ ardi({
         display: flex;
       }
     }
-    [part=footer-nav] a:first-of-type {
+    [part=footer-nav] app-link:first-of-type {
       display: none;
     }
   `,
