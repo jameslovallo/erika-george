@@ -1,4 +1,4 @@
-import ardi, { html } from 'https://unpkg.com/ardi'
+import ardi, { css, html } from 'https://unpkg.com/ardi'
 import nav from '../nav.js'
 
 ardi({
@@ -31,8 +31,8 @@ ardi({
       </footer>
     `
   },
-  css: /* css */ `
-    @import "/@/css/style.css";
+  styles: css`
+    @import '/@/css/style.css';
     :host {
       background: var(--surface);
       color: var(--on-surface);
@@ -50,17 +50,17 @@ ardi({
     a:hover {
       text-decoration: underline;
     }
-    [part=footer-nav] {
+    [part='footer-nav'] {
       display: none;
       gap: 1rem;
       justify-content: center;
     }
     @media (min-width: 768px) {
-      [part=footer-nav] {
+      [part='footer-nav'] {
         display: flex;
       }
     }
-    [part=footer-nav] app-link:first-of-type {
+    [part='footer-nav'] app-link:first-of-type {
       display: none;
     }
   `,
