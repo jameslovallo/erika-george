@@ -4,16 +4,27 @@
     <easy-form
       style="--accent: var(--on-surface); --button-background: var(--surface)"
     >
-      <label>Name<input type="text" /></label>
-      <label>Phone Number<input type="tel" data-mask="(###) ###-####" /></label>
-      <label>Email Address<input type="email" /></label>
-      <label>Affiliation<input type="text" /></label>
-      <label class="wide">Your Message<textarea></textarea></label>
+      <label>
+        Name
+        <input name="Name" required />
+      </label>
+      <label>
+        Phone Number
+        <input name="Phone" required type="tel" data-mask="(###) ###-####" />
+      </label>
+      <label>
+        Email Address
+        <input name="Email Address" required type="email" />
+      </label>
+      <label>
+        Affiliation
+        <input name="Affiliation" required />
+      </label>
+      <label class="wide">
+        Your Message
+        <textarea name="Message" required></textarea>
+      </label>
     </easy-form>
-    <script
-      src="//unpkg.com/ardi@latest/demos/easyform/easyform.js"
-      type="module"
-    ></script>
   </app-layout>
   <script src="/@/main.js" type="module"></script>
 </body>
