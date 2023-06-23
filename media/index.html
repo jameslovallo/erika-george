@@ -1,0 +1,58 @@
+<body>
+  <app-layout>
+    <h1>Media</h1>
+    <h2>Opinions</h2>
+    <media-links></media-links>
+    <h2>Videos</h2>
+    <div
+      style="
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      "
+    >
+      <figure>
+        <ardi-youtube vid="AQANVRRm3Jw"></ardi-youtube>
+        <figcaption>
+          2021 Lloyd K. Garrison Lecture: Erika George | Elisabeth Haub School
+          of Lawyers
+        </figcaption>
+      </figure>
+      <figure>
+        <ardi-youtube vid="R9QCa8JMa44"></ardi-youtube>
+        <figcaption>Erika George COVID 19 Efforts</figcaption>
+      </figure>
+      <figure>
+        <ardi-youtube vid="4bf47vHPHE8"></ardi-youtube>
+        <figcaption>
+          Erika George | Director | Obert C. & Grace A. Tanner Humanities
+          Center, University of Utah
+        </figcaption>
+      </figure>
+      <figure>
+        <ardi-youtube vid="3Atr53MiS98"></ardi-youtube>
+        <figcaption>
+          Incorporating Rights: Taking Stock of Strategies to Advance Corporate
+          Accountability
+        </figcaption>
+      </figure>
+      <figure>
+        <lite-vimeo videoid="112114649"></lite-vimeo>
+        <figcaption>
+          Erika George, “Not My Life: The Human Costs and Rights Consequences of
+          Trafficking”
+        </figcaption>
+      </figure>
+      <figure>
+        <ardi-youtube vid="hl9sf3uYMXY"></ardi-youtube>
+        <figcaption>
+          CLP Speaker Series: Incorporating Rights: "The Role of Lawyers in
+          Business...
+        </figcaption>
+      </figure>
+    </div>
+    <script src="/@/components/media-links.js" type="module"></script>
+    <script src="//unpkg.com/@slightlyoff/lite-vimeo" type="module"></script>
+  </app-layout>
+  <script src="/@/main.js" type="module"></script>
+</body>

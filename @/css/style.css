@@ -11,6 +11,7 @@
   --color: var(--off-black);
   --heading-color: black;
   --border: rgba(125, 125, 125, 0.4);
+  --label-color: black;
   /* materials */
   --surface: var(--blue-dark);
   --on-surface: white;
@@ -28,6 +29,7 @@
   :root {
     --color: var(--off-white);
     --heading-color: white;
+    --label-color: var(--blue-light);
     background: unset;
   }
 }
@@ -66,7 +68,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -81,6 +83,13 @@ ul,
 ol {
   line-height: 2em;
   padding-inline-start: 1rem;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
 }
 
 a.button {

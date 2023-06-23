@@ -1,7 +1,8 @@
 import 'https://unpkg.com/ardi/@/components/app-link.js'
 import 'https://unpkg.com/ardi/@/components/app-root.js'
-import 'https://unpkg.com/ardi/demos/dialog/dialog.js'
-import '//unpkg.com/ardi@latest/demos/easyform/easyform.js'
+import 'https://unpkg.com/ardi/components/dialog.js'
+import '//unpkg.com/ardi@latest/components/easyform.js'
+import '//unpkg.com/ardi@latest/components/youtube.js'
 
 // load all components
 const components = ['app-footer', 'app-layout', 'app-nav', 'mark-down']
