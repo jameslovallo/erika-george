@@ -5,6 +5,5 @@ export default [
   { label: 'Presentations', href: '/presentations' },
   { label: 'Publications', href: '/publications' },
   { label: 'Media', href: '/media' },
-  { label: 'Leadership', href: '/leadership' },
   { label: 'Contact', href: '/contact' },
 ]
